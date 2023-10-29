@@ -1,0 +1,89 @@
+/*! \mainpage Título de la página principal
+
+@image html doxyque.png "Pie de foto"
+
+# Información sobre Doxygen
+Doxygen admite el uso de la [sintaxis de Markdown (Consulta aquí los comandos básicos)](https://www.markdownguide.org/basic-syntax).
+
+Así como el uso de  <a href="https://htmlcheatsheet.com/">sintaxis <strong>HTML</strong></a>. Esto es especialmente útil
+para aquellos aspectos que Markdown no permite modificar, como el <span  style="color:red">color</span>. Aunque es buena idea evitarlo en la medida de lo posible, por dos
+motivos:
+
+1. <span style="font-size:1.1em">Hace el código <strong>poco</strong> <span style="  background-image: linear-gradient(to left, #4285f4, #34a853, #fbbc05, #ea4335); -webkit-background-clip: text; color: transparent;"> <strong> LEGIBLE </strong> </span></span>
+2. La idea detrás de Markdown es separar _aspecto_ y _contenido_. Y es una __gran idea__.
+
+La forma más correcta de modificar el aspecto debería ser mediante un documento ``.css`` configurado en el archivo ``Doxyfile.in``.
+Si te interesa, puedes echarle un vistazo a la [documentación](https://www.doxygen.nl/manual/customize.html) o a
+temas customizados como [este](https://jothepro.github.io/doxygen-awesome-css/). Aunque el tema por defecto nos parece
+perfecto, _CLÁSICO_. Así puedes centrarte en el contenido.
+
+Por último, lo hemos visto en clase y hay suficientes ejemplos en el código fuente proporcionado, pero puedes consultar la
+mayor parte de la sintaxis de Doxygen para comentar código en su
+[documentación](https://www.doxygen.nl/manual/docblocks.html).
+
+# Introducción
+
+Primera Entrega Obligatoria de Estructuras de Datos, basada en el Procesamiento de Imágenes Digitales, mediante la creación e implementación de los métodos Crop, Zoom2X, Subsample y AdjustContrast del TDA Imagen, así como la realización de sus respectivos archivos 'main'. Realizada por la pareja compuesta por: Javier Jiménez Peláez y Álvaro Maldonado Medina, alumnos del subgrupo de prácticas D2 del grupo D de segundo curso.
+
+# Ejecutables
+
+@image html invert.png
+## Negativo:
+
+Calcula el negativo de una imagen
+
+> __negativo__ \<FichImagenOriginal\> \<FichImagenDestino\>
+@param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular
+@param <FichImagenDestino> Imagen PGM resultado de calcular el negativo
+
+
+@image html subimagen.png
+## Subimagen:
+
+Genera una subimagen a partir de una imagen dada
+
+> __subimagen__ \<fich_orig\> \<fich_rdo\> \<fila\> \<col\> \<filas_sub\> \<cols_sub\>
+@param "<fich_orig>" Imagen en formato PGM a partir de la que se va a generar una subimagen 
+@param <fich_rdo> Imagen PGM resultante de calcularle la subimagen a la anterior
+@param "<fila>" Fila de la imagen original desde la que se empiezan a coger pixeles
+@param <col> Columna de la imagen original desde la que se empiezan a coger pixeles
+@param "<filas_sub>" Numero de filas de la imagen resultante
+@param <cols_sub> Numero de columnas de la imagen resultante
+
+@image html zoom.png
+## Zoom:
+
+Genera una imagen con zoom 2x a partir de una porción de una imagen mediante interpolación
+
+> __zoom__ \<fich_orig\> \<fich_rdo\> \<fila\> \<col\> \<lado\> 
+@param "<fich_orig>" Imagen en formato PGM a partir de la que se va a generar una subimagen y aplicarle un zoom 2x
+@param <fich_rdo> Imagen PGM resultante de calcularle el zoom 2x a la subimagen extraida a la imagen original
+@param "<fila>" Fila de la imagen original desde la que se empiezan a coger pixeles
+@param <col> Columna de la imagen original desde la que se empiezan a coger pixeles
+@param "<lado>" Tamaño del lado de la subimagen a extraer de la original, para luego aplicarle el zoom 2x (p.ej. si lado = 60, el lado tras hacer el zoom y guardar sera 120).
+
+@image html icono.png
+## Icono:
+
+Genera un icono como reduccion de una imagen
+
+> __icono__ \<fich_orig\> \<fich_rdo\> \<factor\>
+@param "<fich_orig>" Imagen en formato PGM a partir de la que se va a calcular el icono
+@param <fich_rdo> Imagen en formato PGM donde se va a guardar el icono tras el cálculo
+@param "<factor>" Factor de reducción de la imagen para calcular y generar el icono
+
+@image html contraste.png
+## Contraste:
+
+Genera una imagen con un aumento en el contraste con respecto de la original
+
+> __contraste__ \<fich_orig\> \<fich_rdo\> \<e1\> \<e2\> \<s1\> \<s2\>
+@param "<fich_orig>" Imagen en formato PGM a partir de la que se va a calcular el aumento de contraste
+@param <fich_rdo> Imagen PGM donde se va a almacenar la imagen cuyo contraste ya ha sido aumentado
+@param "<e1>" Umbral inferior de la imagen de entrada
+@param <e2> Umbral superior de la imagen de entrada
+@param "<s1>" Umbral inferior de la imagen resultante
+@param <s2> Umbral superior de la imagen resultante
+
+
+*/
